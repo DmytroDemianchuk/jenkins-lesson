@@ -1,12 +1,8 @@
-#!groovy
-// Run docker build
-properties ([disbleConcurrentBuild()])
-
-    agent {
+agent {
         label 'main'
-    }
-    stages {
-        stage("create docker images") {
+}
+        stages {
+         stage("create docker images") {
             steps {
                     echo " ======= start build images ======="
                     dir ('docker/toolbox') {
