@@ -1,5 +1,11 @@
 node {
-  stage('hello wordl') {
-    echo 'hello world'
-    }
+  stage('Build image'){
+    /*This build the actual image*/
+
+    app = docker.build("dimadem/kuber:0.1")
+  }
+  stage('test image'){
+    app-inside{
+      echo "test passed"
+  }
 }
