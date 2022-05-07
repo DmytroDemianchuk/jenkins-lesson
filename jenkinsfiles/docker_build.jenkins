@@ -1,7 +1,4 @@
-agent {
-        label 'main'
-}
-        stages {
+stages {
          stage("create docker images") {
             steps {
                     echo " ======= start build images ======="
@@ -10,4 +7,4 @@ agent {
                     }
             }
         }
-   }
+}
