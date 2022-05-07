@@ -1,20 +1,19 @@
 pipeline {
-        agent any
-        environment {
-DOCKER_IMAGE_NAME = "dimadem/kuber:0.1"
+    agent any
+    environment {
+        DOCKER_IMAGE_NAME = "dimadem/kuber:0.1"
+    }
+    stage('Build Docker Image') {
+        when {
+           branch 'main'
         }
-        
-        stage('Build Docker Image'){
-            when {
-                branch 'main'
-            }
-            steps {
-                script {
-                    app = docker.build(DOCKER_IMAGE_NAME)
-                    app.inside {
+        steps {
+            script {
+                app = docker.build(DOCKER_IMAGE_NAME)
+                 app.inside {
                         sh 'echo Hello, World!'
-                    }
-                }
+                 }
             }
         }
+    }
 }
