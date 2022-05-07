@@ -1,8 +1,5 @@
- stage("create docker images") {
-            steps {
-                    echo " ======= start build images ======="
-                    dir ('docker/toolbox') {
-                            sh 'docker build. '
-                    }
-            }
-        }
+node {
+  stage (hello wordl) {
+    echo 'hello world'
+    }
+}
