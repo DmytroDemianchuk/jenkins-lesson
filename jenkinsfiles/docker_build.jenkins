@@ -1,5 +1,4 @@
-stages {
-         stage("create docker images") {
+ stage("create docker images") {
             steps {
                     echo " ======= start build images ======="
                     dir ('docker/toolbox') {
@@ -7,4 +6,3 @@ stages {
                     }
             }
         }
-}
