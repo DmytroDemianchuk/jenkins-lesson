@@ -6,7 +6,7 @@ node {
   }
   stage('test image'){
   
-    app-inside {
+    app-inside{
       echo "test passed"
     }
   }
