@@ -2,7 +2,6 @@
 // Run docker build
 properties ([disbleConcurrentBuild()])
 
-pipeline {
     agent {
         label 'main'
     }
@@ -17,4 +16,3 @@ pipeline {
             }
         }
    }
-}
